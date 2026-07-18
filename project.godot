@@ -8,6 +8,10 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Scorm plugin"
@@ -17,7 +21,7 @@ config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [autoload]
 
-Scorm="*res://addons/scorm/scorm.gd"
+Scorm="*uid://862j463br33s"
 
 [debug]
 

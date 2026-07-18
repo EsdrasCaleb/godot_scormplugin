@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://byeu5ws03cs0"]
+[gd_scene format=3 uid="uid://byeu5ws03cs0"]
 
 [ext_resource type="Script" uid="uid://bom1i5ox70ed2" path="res://addons/scorm/test/test_scorm.gd" id="1_w1fyk"]
 
-[node name="TestScorm" type="Control"]
+[node name="TestScorm" type="Control" unique_id=609105985]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,9 +10,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w1fyk")
-auto_update = null
 
-[node name="AutoRefreshToggle" type="CheckButton" parent="."]
+[node name="AutoRefreshToggle" type="CheckButton" parent="." unique_id=423214501]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -24,7 +23,7 @@ offset_bottom = 95.0
 grow_horizontal = 2
 text = "Auto Refresh on Send"
 
-[node name="Container" type="VBoxContainer" parent="."]
+[node name="Container" type="VBoxContainer" parent="." unique_id=1780575739]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -38,58 +37,58 @@ offset_bottom = -41.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ScoreLine" type="HBoxContainer" parent="Container"]
+[node name="ScoreLine" type="HBoxContainer" parent="Container" unique_id=1586914439]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Container/ScoreLine"]
+[node name="Label" type="Label" parent="Container/ScoreLine" unique_id=978079372]
 layout_mode = 2
 text = "Score:"
 
-[node name="Score" type="SpinBox" parent="Container/ScoreLine"]
+[node name="Score" type="SpinBox" parent="Container/ScoreLine" unique_id=1363313913]
 layout_mode = 2
 
-[node name="ScoreSubmitButton" type="Button" parent="Container/ScoreLine"]
+[node name="ScoreSubmitButton" type="Button" parent="Container/ScoreLine" unique_id=928581086]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Submit
 "
 
-[node name="MarginContainer" type="MarginContainer" parent="Container/ScoreLine"]
+[node name="MarginContainer" type="MarginContainer" parent="Container/ScoreLine" unique_id=1888872234]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VSeparator" type="VSeparator" parent="Container/ScoreLine"]
+[node name="VSeparator" type="VSeparator" parent="Container/ScoreLine" unique_id=689441737]
 layout_mode = 2
 
-[node name="ResultLabel" type="Label" parent="Container/ScoreLine"]
+[node name="ResultLabel" type="Label" parent="Container/ScoreLine" unique_id=1193240608]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Current:"
+text = "Current Score:"
 
-[node name="ScoreValue" type="Label" parent="Container/ScoreLine"]
-custom_minimum_size = Vector2(100, 0)
+[node name="ScoreValue" type="Label" parent="Container/ScoreLine" unique_id=345003024]
+custom_minimum_size = Vector2(165, 0)
 layout_mode = 2
 
-[node name="ScoreRefreshButton" type="Button" parent="Container/ScoreLine"]
+[node name="ScoreRefreshButton" type="Button" parent="Container/ScoreLine" unique_id=1391482069]
 layout_mode = 2
 text = "Refresh"
 
-[node name="SessionTimeLine" type="HBoxContainer" parent="Container"]
+[node name="SessionTimeLine" type="HBoxContainer" parent="Container" unique_id=1357444528]
 visible = false
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Container/SessionTimeLine"]
+[node name="Label" type="Label" parent="Container/SessionTimeLine" unique_id=623930386]
 layout_mode = 2
 text = "Session Time:"
 
-[node name="SessionTime" type="TextEdit" parent="Container/SessionTimeLine"]
+[node name="SessionTime" type="TextEdit" parent="Container/SessionTimeLine" unique_id=2026316238]
 custom_minimum_size = Vector2(100, 35)
 layout_mode = 2
 placeholder_text = "value"
 caret_blink = true
 
-[node name="SessionTimeSubmitButton" type="Button" parent="Container/SessionTimeLine"]
+[node name="SessionTimeSubmitButton" type="Button" parent="Container/SessionTimeLine" unique_id=1928731084]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -97,67 +96,67 @@ disabled = true
 text = "Submit
 "
 
-[node name="MarginContainer" type="MarginContainer" parent="Container/SessionTimeLine"]
+[node name="MarginContainer" type="MarginContainer" parent="Container/SessionTimeLine" unique_id=504898040]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VSeparator" type="VSeparator" parent="Container/SessionTimeLine"]
+[node name="VSeparator" type="VSeparator" parent="Container/SessionTimeLine" unique_id=1746053833]
 layout_mode = 2
 
-[node name="ResultLabel" type="Label" parent="Container/SessionTimeLine"]
+[node name="ResultLabel" type="Label" parent="Container/SessionTimeLine" unique_id=1936612694]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Current:"
 
-[node name="SessionTimeValue" type="Label" parent="Container/SessionTimeLine"]
+[node name="SessionTimeValue" type="Label" parent="Container/SessionTimeLine" unique_id=671456060]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 
-[node name="SessionTimeRefreshButton" type="Button" parent="Container/SessionTimeLine"]
+[node name="SessionTimeRefreshButton" type="Button" parent="Container/SessionTimeLine" unique_id=1092917098]
 layout_mode = 2
 text = "Refresh"
 
-[node name="CompletionStatusLine" type="HBoxContainer" parent="Container"]
+[node name="CompletionStatusLine" type="HBoxContainer" parent="Container" unique_id=1238686880]
 visible = false
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Container/CompletionStatusLine"]
+[node name="Label" type="Label" parent="Container/CompletionStatusLine" unique_id=2121049835]
 layout_mode = 2
 text = "Lession Status:"
 vertical_alignment = 1
 
-[node name="PassToggle" type="CheckButton" parent="Container/CompletionStatusLine"]
+[node name="PassToggle" type="CheckButton" parent="Container/CompletionStatusLine" unique_id=2040390804]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Container/CompletionStatusLine"]
+[node name="MarginContainer" type="MarginContainer" parent="Container/CompletionStatusLine" unique_id=967834277]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VSeparator" type="VSeparator" parent="Container/CompletionStatusLine"]
+[node name="VSeparator" type="VSeparator" parent="Container/CompletionStatusLine" unique_id=837084811]
 layout_mode = 2
 
-[node name="ResultLabel" type="Label" parent="Container/CompletionStatusLine"]
+[node name="ResultLabel" type="Label" parent="Container/CompletionStatusLine" unique_id=1840723248]
 layout_mode = 2
 text = "Current:"
 
-[node name="CompletionStatusValue" type="Label" parent="Container/CompletionStatusLine"]
+[node name="CompletionStatusValue" type="Label" parent="Container/CompletionStatusLine" unique_id=148739260]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 
-[node name="CompletionStatusRefreshButton" type="Button" parent="Container/CompletionStatusLine"]
+[node name="CompletionStatusRefreshButton" type="Button" parent="Container/CompletionStatusLine" unique_id=789947737]
 layout_mode = 2
 text = "Refresh"
 
-[node name="SuccessStatusLine" type="HBoxContainer" parent="Container"]
+[node name="SuccessStatusLine" type="HBoxContainer" parent="Container" unique_id=1143739883]
 visible = false
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Container/SuccessStatusLine"]
+[node name="Label" type="Label" parent="Container/SuccessStatusLine" unique_id=46653658]
 layout_mode = 2
 text = "Success Status:"
 vertical_alignment = 1
 
-[node name="SuccessStatusOptionButton" type="OptionButton" parent="Container/SuccessStatusLine"]
+[node name="SuccessStatusOptionButton" type="OptionButton" parent="Container/SuccessStatusLine" unique_id=377925593]
 layout_mode = 2
 item_count = 3
 popup/item_0/text = "PASSED"
@@ -167,7 +166,7 @@ popup/item_1/id = 1
 popup/item_2/text = "UNKNOWN"
 popup/item_2/id = 2
 
-[node name="SuccessStatusSubmitButton" type="Button" parent="Container/SuccessStatusLine"]
+[node name="SuccessStatusSubmitButton" type="Button" parent="Container/SuccessStatusLine" unique_id=484181355]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -175,122 +174,137 @@ disabled = true
 text = "Submit
 "
 
-[node name="MarginContainer" type="MarginContainer" parent="Container/SuccessStatusLine"]
+[node name="MarginContainer" type="MarginContainer" parent="Container/SuccessStatusLine" unique_id=94213458]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VSeparator" type="VSeparator" parent="Container/SuccessStatusLine"]
+[node name="VSeparator" type="VSeparator" parent="Container/SuccessStatusLine" unique_id=1994960438]
 layout_mode = 2
 
-[node name="ResultLabel" type="Label" parent="Container/SuccessStatusLine"]
+[node name="ResultLabel" type="Label" parent="Container/SuccessStatusLine" unique_id=1957854576]
 layout_mode = 2
 text = "Current:"
 
-[node name="SuccessStatusValue" type="Label" parent="Container/SuccessStatusLine"]
+[node name="SuccessStatusValue" type="Label" parent="Container/SuccessStatusLine" unique_id=832372679]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 
-[node name="SuccessStatusRefreshButton" type="Button" parent="Container/SuccessStatusLine"]
+[node name="SuccessStatusRefreshButton" type="Button" parent="Container/SuccessStatusLine" unique_id=595399336]
 layout_mode = 2
 disabled = true
 text = "Refresh"
 
-[node name="CustomPropLine" type="HBoxContainer" parent="Container"]
+[node name="CustomPropLine" type="HBoxContainer" parent="Container" unique_id=419852776]
 layout_mode = 2
 
-[node name="LeftContainer" type="VBoxContainer" parent="Container/CustomPropLine"]
+[node name="LeftContainer" type="VBoxContainer" parent="Container/CustomPropLine" unique_id=603205145]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Container/CustomPropLine/LeftContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/CustomPropLine/LeftContainer" unique_id=946506191]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Container/CustomPropLine/LeftContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Container/CustomPropLine/LeftContainer/HBoxContainer" unique_id=1084470445]
 layout_mode = 2
 text = "Custom Prop:"
 
-[node name="CustomPropAttr" type="TextEdit" parent="Container/CustomPropLine/LeftContainer/HBoxContainer"]
+[node name="CustomPropAttr" type="TextEdit" parent="Container/CustomPropLine/LeftContainer/HBoxContainer" unique_id=1824583003]
 custom_minimum_size = Vector2(200, 35)
 layout_mode = 2
 placeholder_text = "cmi.attribute"
 context_menu_enabled = false
 caret_blink = true
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Container/CustomPropLine/LeftContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Container/CustomPropLine/LeftContainer" unique_id=1713697596]
 layout_mode = 2
 
-[node name="LabelValue" type="Label" parent="Container/CustomPropLine/LeftContainer/HBoxContainer2"]
+[node name="LabelValue" type="Label" parent="Container/CustomPropLine/LeftContainer/HBoxContainer2" unique_id=618145515]
 layout_mode = 2
 text = "Value:"
 
-[node name="CustomPropInput" type="TextEdit" parent="Container/CustomPropLine/LeftContainer/HBoxContainer2"]
+[node name="CustomPropInput" type="TextEdit" parent="Container/CustomPropLine/LeftContainer/HBoxContainer2" unique_id=129617843]
 custom_minimum_size = Vector2(100, 35)
 layout_mode = 2
 placeholder_text = "value"
 caret_blink = true
 
-[node name="ButtonContainer" type="CenterContainer" parent="Container/CustomPropLine/LeftContainer/HBoxContainer2"]
+[node name="ButtonContainer" type="CenterContainer" parent="Container/CustomPropLine/LeftContainer/HBoxContainer2" unique_id=245622234]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 
-[node name="CustomPropSubmitButton" type="Button" parent="Container/CustomPropLine/LeftContainer/HBoxContainer2/ButtonContainer"]
+[node name="CustomPropSubmitButton" type="Button" parent="Container/CustomPropLine/LeftContainer/HBoxContainer2/ButtonContainer" unique_id=1987333843]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_vertical = 4
 text = "Submit"
 
-[node name="MarginContainer" type="MarginContainer" parent="Container/CustomPropLine"]
+[node name="MarginContainer" type="MarginContainer" parent="Container/CustomPropLine" unique_id=25351088]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VSeparator" type="VSeparator" parent="Container/CustomPropLine"]
+[node name="VSeparator" type="VSeparator" parent="Container/CustomPropLine" unique_id=201945784]
 layout_mode = 2
 
-[node name="ResultLabel" type="Label" parent="Container/CustomPropLine"]
+[node name="ResultLabel" type="Label" parent="Container/CustomPropLine" unique_id=674603627]
 layout_mode = 2
-text = "Current:"
+text = "Current Custom Value:"
 
-[node name="CustomPropValue" type="Label" parent="Container/CustomPropLine"]
-custom_minimum_size = Vector2(100, 0)
+[node name="CustomPropValue" type="Label" parent="Container/CustomPropLine" unique_id=1601398768]
+custom_minimum_size = Vector2(101, 0)
 layout_mode = 2
 autowrap_mode = 2
 
-[node name="CustomPropRefreshButton" type="Button" parent="Container/CustomPropLine"]
+[node name="CustomPropRefreshButton" type="Button" parent="Container/CustomPropLine" unique_id=634289155]
 layout_mode = 2
 size_flags_vertical = 4
 text = "Refresh"
 
-[node name="LessonStatus" type="HBoxContainer" parent="Container"]
+[node name="LessonStatus" type="HBoxContainer" parent="Container" unique_id=350525911]
 layout_mode = 2
 
-[node name="LeftContainer" type="VBoxContainer" parent="Container/LessonStatus"]
+[node name="LeftContainer" type="VBoxContainer" parent="Container/LessonStatus" unique_id=1961656547]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Container/LessonStatus/LeftContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/LessonStatus/LeftContainer" unique_id=1128230431]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Container/LessonStatus/LeftContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Container/LessonStatus/LeftContainer/HBoxContainer" unique_id=146602227]
 layout_mode = 2
 text = "Lesson Status:"
 
-[node name="Completed" type="Button" parent="Container/LessonStatus/LeftContainer/HBoxContainer"]
+[node name="Completed" type="Button" parent="Container/LessonStatus/LeftContainer/HBoxContainer" unique_id=1080941605]
 layout_mode = 2
 text = "Completed"
 
-[node name="Incomplete" type="Button" parent="Container/LessonStatus/LeftContainer/HBoxContainer"]
+[node name="Incomplete" type="Button" parent="Container/LessonStatus/LeftContainer/HBoxContainer" unique_id=289801038]
 layout_mode = 2
 text = "Incomplete"
 
-[node name="Passed" type="Button" parent="Container/LessonStatus/LeftContainer/HBoxContainer"]
+[node name="Passed" type="Button" parent="Container/LessonStatus/LeftContainer/HBoxContainer" unique_id=802674393]
 layout_mode = 2
 text = "Passed"
 
-[node name="Failed" type="Button" parent="Container/LessonStatus/LeftContainer/HBoxContainer"]
+[node name="Failed" type="Button" parent="Container/LessonStatus/LeftContainer/HBoxContainer" unique_id=1376420273]
 layout_mode = 2
 text = "Failed"
 
-[node name="MarginContainer" type="MarginContainer" parent="Container/LessonStatus"]
+[node name="MarginContainer" type="MarginContainer" parent="Container/LessonStatus" unique_id=365560159]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="VSeparator" type="VSeparator" parent="Container/LessonStatus" unique_id=1240985984]
+layout_mode = 2
+
+[node name="ResultLabel" type="Label" parent="Container/LessonStatus" unique_id=1397903535]
+layout_mode = 2
+text = "Current Lesson Status:"
+
+[node name="CompletionStatusValue" type="Label" parent="Container/LessonStatus" unique_id=1893936362]
+custom_minimum_size = Vector2(102, 0)
+layout_mode = 2
+
+[node name="CompletionStatusRefreshButton" type="Button" parent="Container/LessonStatus" unique_id=1189491797]
+layout_mode = 2
+text = "Refresh"
 
 [connection signal="toggled" from="AutoRefreshToggle" to="." method="_on_auto_refresh_toggle_toggled"]
 [connection signal="pressed" from="Container/ScoreLine/ScoreSubmitButton" to="." method="_on_score_submit_button_pressed"]
@@ -303,7 +317,7 @@ size_flags_horizontal = 3
 [connection signal="pressed" from="Container/SuccessStatusLine/SuccessStatusRefreshButton" to="." method="_on_success_status_refresh_button_pressed"]
 [connection signal="pressed" from="Container/CustomPropLine/LeftContainer/HBoxContainer2/ButtonContainer/CustomPropSubmitButton" to="." method="_on_custom_prop_submit_button_pressed"]
 [connection signal="pressed" from="Container/CustomPropLine/CustomPropRefreshButton" to="." method="_on_custom_prop_refresh_button_pressed"]
-[connection signal="pressed" from="Container/LessonStatus/LeftContainer/HBoxContainer/Completed" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Container/LessonStatus/LeftContainer/HBoxContainer/Completed" to="." method="_on_complete_pressed"]
 [connection signal="pressed" from="Container/LessonStatus/LeftContainer/HBoxContainer/Incomplete" to="." method="_on_incomplete_pressed"]
 [connection signal="pressed" from="Container/LessonStatus/LeftContainer/HBoxContainer/Passed" to="." method="_on_passed_pressed"]
 [connection signal="pressed" from="Container/LessonStatus/LeftContainer/HBoxContainer/Failed" to="." method="_on_failed_pressed"]

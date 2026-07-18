@@ -8,7 +8,8 @@ extends Control
 @onready var session_time_value := $Container/SessionTimeLine/SessionTimeValue
 @onready var success_status_input := $Container/SuccessStatusLine/SuccessStatusOptionButton
 @onready var success_status_value := $Container/SuccessStatusLine/SuccessStatusValue
-@onready var lesson_status_value := $Container/CompletionStatusLine/CompletionStatusValue
+#@onready var lesson_status_value := $Container/CompletionStatusLine/CompletionStatusValue
+@onready var lesson_status_value := $Container/LessonStatus/CompletionStatusValue
 @onready var custom_prop_attr := $Container/CustomPropLine/LeftContainer/HBoxContainer/CustomPropAttr
 @onready var custom_prop_input := $Container/CustomPropLine/LeftContainer/HBoxContainer2/CustomPropInput
 @onready var custom_prop_value := $Container/CustomPropLine/CustomPropValue
@@ -97,7 +98,7 @@ func _on_custom_prop_refresh_button_pressed() -> void:
 	_update_custom_prop_label()
 
 
-func _on_button_pressed():
+func _on_complete_pressed():
 	Scorm.set_lesson_status(Scorm.LessonStatus.COMPLETED)
 
 
