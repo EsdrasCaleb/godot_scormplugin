@@ -1,8 +1,6 @@
 # Godot SCORM Plugin
 
-Offers a channel for communication with the SCORM API and packages the **Web exported** files into a ZIP archive.
-The communication can be made with the functions or the signals of the `Scorm` autoload node.
-`ScormExport` do the post-export zip packaging.
+Offers a channel for communication with the SCORM API and packages the **Web exported** files into a ZIP archive. The communication can be made with the functions or the signals of the `Scorm` autoload node. `ScormExport` do the post-export zip packaging.
 
 Follows the _SCORM 1.2_ specification.
 
@@ -29,17 +27,12 @@ Follows the _SCORM 1.2_ specification.
 This plugin takes care of the SCORM's init and finish process, abstracting its quirks for you. The developer should:
 
 - Set a `score` for the current learner's attempt.
-- In case the student has reached the end of the exercise, call `set_lesson_status(LessonStatus.COMPLETED)` to signalize 
-it for the SCORM runtime. In case the lesson should be considered a test, `set_lesson_status(LessonStatus.PASSED)` can
-be used in case the learner surpassed the threshold for approval. Otherwise, `set_lesson_status(LessonStatus.FAILED)`
-should be called.
-- At the first lesson attempt start, `cmi.core.lesson_status` has the value `not attempted` (defined by the LMS), the plugin
-sets it to `incomplete` as soon as possible (as suggested by the SCORM reference, see `doStart()`, `doUnload()` at `scorm.js`).
-This way, the current attempt progression is retained by the LMS if the user closes the browser or exits the SCORM lesson abruptly.
+- In case the student has reached the end of the exercise, call `set_lesson_status(LessonStatus.COMPLETED)` to signalize it for the SCORM runtime. In case the lesson should be considered a test, `set_lesson_status(LessonStatus.PASSED)` can be used in case the learner surpassed the threshold for approval. Otherwise, `set_lesson_status(LessonStatus.FAILED)` should be called.
+- At the first lesson attempt start, `cmi.core.lesson_status` has the value `not attempted` (defined by the LMS), the plugin sets it to `incomplete` as soon as possible (as suggested by the SCORM reference, see `doStart()`, `doUnload()` at `scorm.js`). This way, the current attempt progression is retained by the LMS if the user closes the browser or exits the SCORM lesson abruptly.
 
 ### Scorm Data Model
 
-#### `cmi.core.score.raw` - score (float RW Persistent*)
+#### `cmi.core.score.raw` - score (float RW Persistent\*)
 
 Represents the student score in the current SCO attempt.
 
@@ -51,17 +44,16 @@ Represents the student score in the current SCO attempt.
 
 Managed at the Javascript routines (`scorm.js`).
 
-##### `cmi.core.lesson_location` (String(255 chars) RW Persistent*)
+##### `cmi.core.lesson_location` (String(255 chars) RW Persistent\*)
 
 The learner’s current location in the SCO. A free text field for the SCO to record a bookmark.
 
-##### `cmi.suspend_data` (String(4096 chars) RW Persistent*)
+##### `cmi.suspend_data` (String(4096 chars) RW Persistent\*)
 
 Provides space to store and retrieve data between learner sessions.
 
 > [!NOTE]
-> Attributes marked as **Persistent** above retain its values between runs in the same attempt (in case the learner chose to
-continue a previous run).
+> Attributes marked as **Persistent** above retain its values between runs in the same attempt (in case the learner chose to continue a previous run).
 
 More info:
 
